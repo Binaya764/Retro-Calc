@@ -1,18 +1,31 @@
 #includes the calcuatio part of the calculator
 class User:
     def calculations(self,num1,num2):
-            option = input("Enter the opetation you want to perform (add,subtract,multipley,divide):")
+            option = input("Enter the operation you want to perform (add,subtract,multiply,divide):")
             if(option == "add"):
                    result = num1 + num2
                    self.display(result)
                    
 
             elif(option =="subtract"):
-                   pass
+                   result = num1 - num2
+                   self.display(result)
+
             elif(option == "multiply"):
-                   pass
+                   result = num1*num2
+                   self.display(result)
+
             elif(option == "divide"):
-                   pass
+                   if(num2 == 0):
+                          print("cannot be divided by zero!")
+                   else:
+                          result = num1/num2
+                          self.display(result)
+                          
+
+                     
+              
+
     
 
 
@@ -39,7 +52,7 @@ class User:
 u1 = User()
 while(True):
        data = u1.User_input()
-       if(data=='q' or 'Q'):
+       if(data.lower()=='q'):
               break
        else:
               u1.User_value(data)
